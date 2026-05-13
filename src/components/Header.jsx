@@ -16,7 +16,7 @@ export default function Header() {
     const el = document.querySelector(id);
     if (!el) return;
 
-    const headerHeight = 0;
+    const headerHeight = document.querySelector('header')?.offsetHeight || 70;
     const targetY = el.getBoundingClientRect().top + window.pageYOffset - headerHeight;
     const startY = window.pageYOffset;
     const distance = targetY - startY;
@@ -40,6 +40,8 @@ export default function Header() {
     { href: '#home', label: 'Início' },
     { href: '#about', label: 'Sobre' },
     { href: '#cuts', label: 'Cortes' },
+    { href: '#cuts-aves', label: 'Frango & Porco' },
+    { href: '#kits', label: 'Kits' },
     { href: '#videos', label: 'Vídeos' },
     { href: '#contact', label: 'Contato' },
   ];

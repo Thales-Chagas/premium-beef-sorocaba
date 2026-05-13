@@ -112,6 +112,12 @@ export default function Hero() {
           background: transparent;
           color: #fff;
           border: 1px solid rgba(255,255,255,0.35);
+          width: 221px;
+          height: 39px;
+          padding: 0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
         }
         .btn-outline:hover {
           border-color: #c0392b;

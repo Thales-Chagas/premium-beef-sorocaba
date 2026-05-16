@@ -161,9 +161,6 @@ export default function Hero() {
           background: 'linear-gradient(135deg, rgba(10,5,5,0.72) 0%, rgba(192,57,43,0.22) 100%)'
         }} />
 
-        {/* Linha decorativa */}
-        <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-[#c0392b]/60 to-transparent z-[3]" />
-
         {/* Content */}
         <div className="relative z-10 text-center text-white px-6 sm:px-8 max-w-3xl mx-auto w-full">
           {/* Logo */}
@@ -185,11 +182,10 @@ export default function Hero() {
           </p>
           <h1
             className="font-serif text-5xl sm:text-7xl md:text-8xl font-black leading-none animate-fadeInUp"
-            style={{ animationDelay: '0.2s', marginBottom: '2rem' }}
+            style={{ animationDelay: '0.2s', marginBottom: '4rem' }}
           >
             PREMIUM <span style={{ color: '#c9a84c' }}>BEEF</span>
           </h1>
-          <div className="w-16 h-px bg-[#c0392b]/80 mx-auto" style={{ animationDelay: '0.3s', marginBottom: '2rem' }} />
           <p
             className="font-sans text-xs sm:text-sm text-[#d4a017] mx-auto leading-relaxed tracking-[4px] uppercase animate-fadeInUp text-center"
             style={{ animationDelay: '0.4s', marginBottom: '2rem', fontWeight: 500, textShadow: '0 0 20px rgba(212,160,23,0.5)', maxWidth: '100%', paddingLeft: '4px' }}

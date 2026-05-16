@@ -189,10 +189,15 @@ export default function Header() {
           </ul>
 
           {/* Mobile Button */}
-          <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden flex flex-col gap-1.5 p-1 ml-auto">
-            <span className={`block w-5 h-px bg-white transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-            <span className={`block w-5 h-px bg-white transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-5 h-px bg-white transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+          <button 
+            onClick={() => setMobileOpen(!mobileOpen)} 
+            className="md:hidden flex flex-col gap-1.5 p-2 ml-auto mr-4"
+            aria-label="Menu"
+            style={{ marginRight: '20px' }}
+          >
+            <span className={`block w-6 h-0.5 bg-[#c9a84c] transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`block w-6 h-0.5 bg-[#c9a84c] transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-6 h-0.5 bg-[#c9a84c] transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
           </button>
         </nav>
 

@@ -4,8 +4,7 @@ import About from './components/About';
 import Cuts from './components/Cuts';
 import CutsAves from './components/CutsAves';
 import Kits from './components/Kits';
-import Videos from './components/Videos';
-import Contact from './components/Contact';
+import Feedback from './components/Feedback';
 import Footer from './components/Footer';
 import './index.css';
 
@@ -45,8 +44,8 @@ export default function App() {
         <CutsAves />
         <SectionDivider fromColor="#000" toColor="#080604" />
         <Kits />
-        <Videos />
-        <Contact />
+        <SectionDivider fromColor="#080604" toColor="#000" />
+        <Feedback />
       </main>
       <Footer />
     </>

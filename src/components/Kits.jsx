@@ -51,7 +51,7 @@ export default function Kits() {
 
         .kt-inner {
           position:relative; z-index:2;
-          max-width:1100px; margin:0 auto; padding:5vh 3vw 0;
+          max-width:1400px; margin:0 auto; padding:5vh 3vw 0;
         }
 
         /* HEADER */
@@ -80,15 +80,15 @@ export default function Kits() {
           display:flex; justify-content:center; gap:2vw; margin-bottom:3vh; flex-wrap:wrap;
         }
         .kt-badge-item {
-          display:flex; flex-direction:column; align-items:center; gap:6px;
-          font-family:Montserrat,sans-serif; font-size:0.5rem; font-weight:600;
-          letter-spacing:0.18em; color:rgba(255,255,255,0.4); text-transform:uppercase;
-          text-align:center; min-width:80px;
+          display:flex; flex-direction:column; align-items:center; gap:8px;
+          font-family:Montserrat,sans-serif; font-size:0.55rem; font-weight:600;
+          letter-spacing:0.18em; color:rgba(255,255,255,0.45); text-transform:uppercase;
+          text-align:center; min-width:100px;
         }
         .kt-badge-icon {
-          width:42px; height:42px; border:1px solid rgba(201,168,76,0.4);
+          width:56px; height:56px; border:1px solid rgba(201,168,76,0.4);
           border-radius:50%; display:flex; align-items:center; justify-content:center;
-          color:#c9a84c; font-size:1.1rem; background:rgba(0,0,0,0.4);
+          color:#c9a84c; background:rgba(0,0,0,0.4);
         }
 
         /* KIT CARDS */
@@ -147,12 +147,12 @@ export default function Kits() {
         }
         .kt-card-name {
           font-family:'Playfair Display',serif; font-weight:900;
-          font-size:clamp(1.8rem,2.5vw,2.6rem); color:#fff; line-height:1;
+          font-size:clamp(2.2rem,3vw,3.2rem); color:#fff; line-height:1;
           text-transform:uppercase;
         }
         .kt-card-name em { font-style:normal; color:#c9a84c; }
         .kt-card-desc {
-          font-family:Montserrat,sans-serif; font-size:0.7rem; font-weight:300;
+          font-family:Montserrat,sans-serif; font-size:0.85rem; font-weight:300;
           color:rgba(255,255,255,0.45); line-height:1.6; max-width:300px;
         }
         .kt-card-features {
@@ -160,30 +160,42 @@ export default function Kits() {
           list-style:none; padding:0; margin:0;
         }
         .kt-card-feature {
-          font-family:Montserrat,sans-serif; font-size:0.6rem; font-weight:300;
+          font-family:Montserrat,sans-serif; font-size:0.72rem; font-weight:300;
           color:rgba(255,255,255,0.4); display:flex; align-items:flex-start; gap:5px;
           line-height:1.4;
         }
-        .kt-card-feature::before { content:'✦'; color:#c9a84c; font-size:0.42rem; margin-top:2px; flex-shrink:0; }
+        .kt-card-feature::before { content:'✦'; color:#c9a84c; font-size:0.5rem; margin-top:2px; flex-shrink:0; }
 
         /* Price col */
         .kt-card-price-col {
           padding:24px 20px;
           display:flex; flex-direction:column; align-items:center; justify-content:center;
           gap:12px; background:rgba(0,0,0,0.25);
+          position:relative;
+        }
+        .kt-card-price-col::before {
+          content:'';
+          position:absolute;
+          left:0;
+          top:50%;
+          transform:translateY(-50%);
+          width:3px;
+          height:60%;
+          background:linear-gradient(to bottom, transparent, #c9a84c 20%, #c9a84c 80%, transparent);
+          box-shadow:0 0 10px rgba(201,168,76,0.5);
         }
         .kt-price-label {
-          font-family:Montserrat,sans-serif; font-size:0.52rem; font-weight:600;
+          font-family:Montserrat,sans-serif; font-size:0.55rem; font-weight:600;
           letter-spacing:0.25em; color:rgba(255,255,255,0.35); text-transform:uppercase;
         }
         .kt-price {
           font-family:'Playfair Display',serif; font-weight:900;
-          font-size:clamp(2.4rem,3.2vw,3.4rem); color:#c9a84c; line-height:1;
+          font-size:clamp(2.2rem,3vw,3.2rem); color:#c9a84c; line-height:1;
           text-shadow:0 0 30px rgba(201,168,76,0.45);
         }
         .kt-price sup { font-size:0.45em; vertical-align:super; }
         .kt-price-installment {
-          font-family:Montserrat,sans-serif; font-size:0.5rem; font-weight:400;
+          font-family:Montserrat,sans-serif; font-size:0.6rem; font-weight:400;
           color:rgba(255,255,255,0.25); text-align:center; letter-spacing:0.08em;
           text-transform:uppercase;
         }
@@ -200,43 +212,33 @@ export default function Kits() {
         }
         .kt-btn:hover { transform:translateY(-2px); box-shadow:0 0 28px rgba(201,168,76,0.6); }
         .kt-btn-icon { font-size:0.95rem; }
-        .kt-btn .kt-flames {
-          position:absolute; bottom:100%; left:0; width:100%; height:28px;
-          pointer-events:none; display:flex; justify-content:space-around;
-          align-items:flex-end; opacity:0; transition:opacity 0.2s;
-        }
-        .kt-btn:hover .kt-flames { opacity:1; }
-        .kt-flame { width:5px; border-radius:50% 50% 20% 20%; animation:kt-fireRise 0.5s ease-out infinite; }
-        .kt-flame:nth-child(odd) { background:linear-gradient(to top,#f0c040,#e74c3c); height:16px; }
-        .kt-flame:nth-child(even) { background:linear-gradient(to top,#e74c3c,#c0392b); height:10px; animation-delay:.15s; }
-        .kt-flame:nth-child(3n) { background:linear-gradient(to top,#fff,#f0c040); height:20px; animation-delay:.08s; }
-        .kt-btn .kt-embers {
-          position:absolute; bottom:95%; left:0; width:100%; height:30px;
-          pointer-events:none; opacity:0; transition:opacity 0.2s;
-        }
-        .kt-btn:hover .kt-embers { opacity:1; }
-        .kt-ember { position:absolute; width:3px; height:3px; border-radius:50%; background:#f0c040; animation:kt-ember 0.8s ease-out infinite; }
 
         /* FOOTER BAR */
         .kt-footer {
           display:grid; grid-template-columns:repeat(3,1fr);
-          background:rgba(0,0,0,0.75); border-top:1px solid rgba(201,168,76,0.12);
+          background:rgba(0,0,0,0.6);
+          border-top:1px solid rgba(201,168,76,0.15);
           margin-top:2.5vh;
         }
         .kt-footer-item {
-          display:flex; align-items:center; gap:12px;
-          padding:16px 20px; border-right:1px solid rgba(201,168,76,0.08);
+          display:flex; align-items:center; justify-content:center; gap:14px;
+          padding:18px 24px; border-right:1px solid rgba(201,168,76,0.08);
         }
         .kt-footer-item:last-child { border-right:none; }
-        .kt-footer-icon { font-size:1.3rem; color:#c9a84c; flex-shrink:0; }
-        .kt-footer-text { display:flex; flex-direction:column; gap:2px; }
+        .kt-footer-icon {
+          width:36px; height:36px; flex-shrink:0;
+          border:1px solid rgba(201,168,76,0.3); border-radius:50%;
+          display:flex; align-items:center; justify-content:center;
+          color:#c9a84c; font-size:0.9rem;
+        }
+        .kt-footer-text { display:flex; flex-direction:column; gap:3px; text-align:center; }
         .kt-footer-title {
-          font-family:Montserrat,sans-serif; font-size:0.6rem; font-weight:700;
-          letter-spacing:0.14em; color:#fff; text-transform:uppercase;
+          font-family:Montserrat,sans-serif; font-size:0.62rem; font-weight:700;
+          letter-spacing:0.18em; color:#fff; text-transform:uppercase;
         }
         .kt-footer-sub {
           font-family:Montserrat,sans-serif; font-size:0.5rem; font-weight:300;
-          color:rgba(255,255,255,0.3); letter-spacing:0.08em; text-transform:uppercase;
+          color:rgba(255,255,255,0.3); letter-spacing:0.1em; text-transform:uppercase;
         }
 
         /* LIGHTBOX */
@@ -296,21 +298,6 @@ export default function Kits() {
             <p className="kt-head-sub">Qualidade <em>Premium</em> para momentos únicos</p>
           </div>
 
-          {/* BADGES */}
-          <div className="kt-badges">
-            {[
-              { icon: '🥩', label: 'Carnes\nSelecionadas' },
-              { icon: '🔥', label: 'Corte Premium\ne Frescos' },
-              { icon: '🚚', label: 'Entrega Rápida\ne Segura' },
-              { icon: '🛡️', label: 'Compra 100%\nSegura' },
-            ].map((b) => (
-              <div key={b.label} className="kt-badge-item">
-                <div className="kt-badge-icon">{b.icon}</div>
-                <span style={{ whiteSpace: 'pre-line' }}>{b.label}</span>
-              </div>
-            ))}
-          </div>
-
           {/* KIT CARDS */}
           <div className="kt-cards">
 
@@ -343,15 +330,8 @@ export default function Kits() {
                   target="_blank" rel="noopener noreferrer"
                   className="kt-btn"
                 >
-                  <span className="kt-flames">
-                    {[...Array(10)].map((_, i) => <span key={i} className="kt-flame" style={{ animationDelay: (i * 0.05) + 's' }} />)}
-                  </span>
-                  <span className="kt-embers">
-                    {[...Array(6)].map((_, i) => <span key={i} className="kt-ember" style={{ left: (10 + i * 15) + '%', animationDelay: (i * 0.12) + 's', '--ex': ((i % 2 === 0 ? 1 : -1) * (4 + i * 2)) + 'px' }} />)}
-                  </span>
-                  <span className="kt-btn-icon">💬</span> Pedir Agora
+                  Pedir Agora
                 </a>
-                <span className="kt-price-installment">Parcele em até 3x sem juros</span>
               </div>
             </div>
 
@@ -384,15 +364,8 @@ export default function Kits() {
                   target="_blank" rel="noopener noreferrer"
                   className="kt-btn"
                 >
-                  <span className="kt-flames">
-                    {[...Array(10)].map((_, i) => <span key={i} className="kt-flame" style={{ animationDelay: (i * 0.05) + 's' }} />)}
-                  </span>
-                  <span className="kt-embers">
-                    {[...Array(6)].map((_, i) => <span key={i} className="kt-ember" style={{ left: (10 + i * 15) + '%', animationDelay: (i * 0.12) + 's', '--ex': ((i % 2 === 0 ? 1 : -1) * (4 + i * 2)) + 'px' }} />)}
-                  </span>
-                  <span className="kt-btn-icon">💬</span> Pedir Agora
+                  Pedir Agora
                 </a>
-                <span className="kt-price-installment">Parcele em até 3x sem juros</span>
               </div>
             </div>
 
@@ -401,21 +374,27 @@ export default function Kits() {
           {/* FOOTER BAR */}
           <div className="kt-footer">
             <div className="kt-footer-item">
-              <span className="kt-footer-icon">💬</span>
+              <div className="kt-footer-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
               <div className="kt-footer-text">
                 <span className="kt-footer-title">Fale Agora no WhatsApp</span>
                 <span className="kt-footer-sub">Atendimento rápido e personalizado</span>
               </div>
             </div>
             <div className="kt-footer-item">
-              <span className="kt-footer-icon">✅</span>
+              <div className="kt-footer-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
               <div className="kt-footer-text">
                 <span className="kt-footer-title">Satisfação Garantida</span>
                 <span className="kt-footer-sub">Qualidade ou seu dinheiro de volta</span>
               </div>
             </div>
             <div className="kt-footer-item">
-              <span className="kt-footer-icon">🚚</span>
+              <div className="kt-footer-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
               <div className="kt-footer-text">
                 <span className="kt-footer-title">Entrega Rápida</span>
                 <span className="kt-footer-sub">Em até 24h para sua região</span>

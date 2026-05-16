@@ -42,8 +42,7 @@ export default function Header() {
     { href: '#cuts', label: 'Cortes' },
     { href: '#cuts-aves', label: 'Frango & Porco' },
     { href: '#kits', label: 'Kits' },
-    { href: '#videos', label: 'Vídeos' },
-    { href: '#contact', label: 'Contato' },
+    { href: '#feedback', label: 'Contato' },
   ];
 
   return (

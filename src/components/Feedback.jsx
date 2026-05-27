@@ -1174,7 +1174,7 @@ export default function Feedback() {
           <div className="fb-credits">
             <div className="fb-credits-container">
               <div className="fb-credits-left">
-                © 2026 <span className="fb-credits-brand">PREMIUM BEEF</span> - TODOS OS DIREITOS RESERVADOS
+                © 2026 <span className="fb-credits-brand">PREMIUM BEEF SOROCABA</span> - TODOS OS DIREITOS RESERVADOS
               </div>
               <div className="fb-credits-right">
                 DESIGN & DESENVOLVIMENTO <span className="fb-credits-separator">—</span> <a href="https://wa.me/5515981249470?text=Olá%2C%20vi%20seu%20trabalho%20no%20site%20premiumbeefsorocaba%20e%20tenho%20interesse%20em%20um%20projeto." target="_blank" rel="noopener noreferrer" className="fb-credits-dev">THALES CHAGAS</a>
